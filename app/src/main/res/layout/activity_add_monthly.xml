@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:backgroundTint="@color/bgColor"
+    android:orientation="vertical"
+    tools:context=".AddMonthly">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Task Title"
+            android:textColor="@color/bgColor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/terColor"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter Task Title"
+            android:inputType="text"
+            android:textColor="@color/bgColor"
+            android:textColorHint="@color/textHint"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTaskDescript"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Task Description"
+            android:textColor="@color/bgColor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter Task Description"
+            android:inputType="text"
+            android:textColor="@color/bgColor"
+            android:textColorHint="@color/textHint"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Date"
+            android:textColor="@color/bgColor"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtEnterTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/terColor"
+                android:ems="13"
+                android:fontFamily="@font/poppins"
+                android:hint="Enter Date"
+                android:inputType="time"
+                android:textColor="@color/bgColor"
+                android:textColorHint="@color/textHint"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btnClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00FFFFFF"
+                app:tint="@color/bgColor"
+                app:srcCompat="@drawable/clock" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnsave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="@color/secondaryColor"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Save"
+            android:textColor="@color/bgColor"
+            android:textSize="14sp"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

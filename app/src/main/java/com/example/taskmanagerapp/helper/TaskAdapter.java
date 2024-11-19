@@ -27,7 +27,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         this.taskList = contactList;
     }
 
-
     @NonNull
     @Override
     public TaskAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
