@@ -14,7 +14,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#4A235A"
+    android:background="@color/bgColor"
     tools:context=".MainActivity">
 
     <!-- Title -->
