@@ -6,5 +6,6 @@
     <color name="mainColor"> #D4BEE4</color>
     <color name="secondaryColor">#9B7EBD</color>
     <color name="terColor">#60407B</color>
+    <color name="textHint">#9A7EBC</color>
 
 </resources>
