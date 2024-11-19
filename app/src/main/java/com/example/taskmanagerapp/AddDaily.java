@@ -45,7 +45,7 @@ public class AddDaily extends AppCompatActivity {
             txtDescription = findViewById(R.id.txtDescription);
             txtEnterTime = findViewById(R.id.txtEnterTime);
             btnclock = findViewById(R.id.btnClock);
-            btnsave = findViewById(R.id.btnsave);
+            btnsave = findViewById(R.id.btnUpdate);
 
             btnclock.setOnClickListener(new View.OnClickListener() {
                 @Override

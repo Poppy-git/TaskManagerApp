@@ -16,6 +16,9 @@
             android:name=".AddMonthly"
             android:exported="false" />
         <activity
+            android:name=".UpdateDaily"
+            android:exported="false" />
+        <activity
             android:name=".AddDaily"
             android:exported="false" />
         <activity
@@ -27,6 +30,7 @@
         <activity
             android:name=".AddEdit"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

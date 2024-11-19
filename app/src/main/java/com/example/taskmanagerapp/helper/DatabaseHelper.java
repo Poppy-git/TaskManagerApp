@@ -72,6 +72,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public Cursor readTaskById (String id) {
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE id = " + id;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db == null) Toast.makeText(context, "NO DATA", Toast.LENGTH_SHORT).show();
+        else cursor = db.rawQuery(query, null);
+
+        return cursor;
+
+    }
+
+    public long updateTaskbyId(Task task) {
+         SQLiteDatabase db = this.getWritableDatabase();
+         ContentValues cv = new ContentValues();
+
+         cv.put(COL_TASKTITLE, task.gettaskTitle());
+         cv.put(COL_TASKDESCRIPTION, task.gettaskDescription());
+         cv.put(COL_TIME, task.gettaskTime());
+
+         return db.update(TABLE_NAME, cv, "id=?", new String[]{task.getID()+""});
+    }
+
     public long deleteTaskbyID (String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "id=?", new String[]{id});
