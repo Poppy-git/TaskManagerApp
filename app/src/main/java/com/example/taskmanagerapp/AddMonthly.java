@@ -35,7 +35,7 @@ public class AddMonthly extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_add_daily);
+        setContentView(R.layout.activity_add_monthly);
 
         txtTitle = findViewById(R.id.txtTitle);
         txtDescription = findViewById(R.id.txtDescription);
@@ -70,9 +70,9 @@ public class AddMonthly extends AppCompatActivity {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                txtEnterDate.setText(String.valueOf(year)+"."+String.valueOf(month)+"."+String.valueOf(dayOfMonth)+".");
+                txtEnterDate.setText(String.valueOf(year)+" - "+String.valueOf(month)+" - "+String.valueOf(dayOfMonth));
             }
-        },2024,0, 15);
+        },2024,1, 15);
         dialog.show();
     }
 }

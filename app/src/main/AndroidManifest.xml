@@ -13,11 +13,8 @@
         android:theme="@style/Theme.TaskManagerApp"
         tools:targetApi="31">
         <activity
-            android:name=".AddMonthly"
-            android:exported="false" />
-        <activity
-            android:name=".UpdateDaily"
-            android:exported="false" />
+            android:name=".AddEdit"
+            android:exported="true" />
         <activity
             android:name=".AddDaily"
             android:exported="false" />
@@ -28,8 +25,8 @@
             android:name=".DisplayData"
             android:exported="false" />
         <activity
-            android:name=".AddEdit"
-            android:exported="true">
+            android:name=".AddMonthly"
+            android:exported="true" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
