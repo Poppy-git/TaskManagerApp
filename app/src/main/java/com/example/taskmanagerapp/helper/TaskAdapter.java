@@ -2,6 +2,7 @@ package com.example.taskmanagerapp.helper;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskmanagerapp.R;
+import com.example.taskmanagerapp.UpdateDaily;
 import com.example.taskmanagerapp.entity.Task;
 
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
     public TaskAdapter(Context context, ArrayList<Task> contactList) {
         this.context = context;
         this.taskList = contactList;
+
     }
 
     @NonNull
@@ -41,6 +44,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         holder.txtTaskTitle2.setText(t.gettaskTitle()+"");
         holder.txtDue.setText(t.gettaskTime());
         holder.txtTask2.setText(t.gettaskDescription());
+
+        holder.btnEdit.setOnClickListener(v-> {
+            Intent i = new Intent(context, UpdateDaily.class);
+            i.putExtra("id", String.valueOf(t.getID()));
+            context.startActivity(i);
+        });
+
+
     }
 
     @Override
@@ -51,6 +62,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtTaskTitle2, txtDue, txtTask2;
+        Button btnEdit;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +70,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
             txtTaskTitle2 = itemView.findViewById(R.id.txtTaskTitle2);
             txtDue = itemView.findViewById(R.id.txtDue);
             txtTask2 = itemView.findViewById(R.id.txtTask2);
+            btnEdit = itemView.findViewById(R.id.btnUpdate);
         }
 
     }

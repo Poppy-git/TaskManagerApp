@@ -72,8 +72,27 @@ public class AddEdit extends AppCompatActivity {
         rvTask.setAdapter(taskAdapter);
         rvTask.setLayoutManager(new LinearLayoutManager(AddEdit.this));
 
+    }
 
+    protected void onResume() {
+        super.onResume();
+        taskList.clear();
 
+        DatabaseHelper dh = new DatabaseHelper(AddEdit.this);
+        Cursor cur = dh.readAllTask();
+
+        if(cur.getCount()==0) {
+            //NO DATA
+        } else {
+
+            while (cur.moveToNext()) {
+                Task t = new Task (cur.getString(1), cur.getString(2),"Due at " +  cur.getString(3) );
+
+                taskList.add(t);
+            }
+
+            //Toast.makeText(this, taskList.size() + "", Toast.LENGTH_SHORT).show();
+        }
 
 
     }

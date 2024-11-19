@@ -16,6 +16,9 @@
             android:name=".AddMonthly"
             android:exported="false" />
         <activity
+            android:name=".UpdateDaily"
+            android:exported="false" />
+        <activity
             android:name=".AddDaily"
             android:exported="false" />
         <activity

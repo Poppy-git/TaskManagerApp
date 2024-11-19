@@ -8,7 +8,8 @@
     android:background="@color/bgColor"
     android:backgroundTint="@color/bgColor"
     android:orientation="vertical"
-    tools:context=".AddDaily">
+    tools:context=".UpdateDaily">
+    <?xml version="1.0" encoding="utf-8"?>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtTaskTitle"
+            android:id="@+id/lblTaskTitleUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -32,7 +33,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/txtTitle"
+            android:id="@+id/txtTitleUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -58,7 +59,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtTaskDescript"
+            android:id="@+id/lblTaskDescriptUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -70,7 +71,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/txtDescription"
+            android:id="@+id/txtDescriptionUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -96,7 +97,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtTime"
+            android:id="@+id/lblTimeUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -116,7 +117,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/txtEnterTime"
+                android:id="@+id/txtEnterTimeUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -130,35 +131,47 @@
                 android:textSize="16sp" />
 
             <ImageButton
-                android:id="@+id/btnClock"
+                android:id="@+id/btnClockUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
-                app:tint="@color/bgColor"
-                app:srcCompat="@drawable/clock" />
+                app:srcCompat="@drawable/clock"
+                app:tint="@color/bgColor" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="bottom|center_horizontal"
+        android:foregroundGravity="center"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btnUpdate"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="110dp"
-            android:layout_marginBottom="50dp"
             android:backgroundTint="@color/secondaryColor"
             android:fontFamily="@font/poppins_medium"
-            android:text="Save"
+            android:paddingHorizontal="60dp"
+            android:paddingVertical="10dp"
+            android:text="Update"
             android:textColor="@color/bgColor"
             android:textSize="14sp"
-            app:cornerRadius="8dp" />
+            app:cornerRadius="12dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondaryColor"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingHorizontal="60dp"
+            android:paddingVertical="10dp"
+            android:text="Cancel"
+            android:textColor="@color/bgColor"
+            android:textSize="14sp"
+            app:cornerRadius="12dp" />
     </LinearLayout>
 
 </LinearLayout>
