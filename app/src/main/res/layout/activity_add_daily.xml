@@ -135,7 +135,8 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
                 app:tint="@color/bgColor"
-                app:srcCompat="@drawable/clock" />
+                app:srcCompat="@drawable/clock"
+                />
         </LinearLayout>
     </LinearLayout>
 

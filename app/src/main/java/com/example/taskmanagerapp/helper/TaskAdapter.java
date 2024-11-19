@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskmanagerapp.R;
-import com.example.taskmanagerapp.UpdateDaily;
 import com.example.taskmanagerapp.entity.Task;
 
 import java.util.ArrayList;
@@ -45,11 +44,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         holder.txtDue.setText(t.gettaskTime());
         holder.txtTask2.setText(t.gettaskDescription());
 
-        holder.btnEdit.setOnClickListener(v-> {
-            Intent i = new Intent(context, UpdateDaily.class);
-            i.putExtra("id", String.valueOf(t.getID()));
-            context.startActivity(i);
-        });
+
 
 
     }
@@ -70,7 +65,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
             txtTaskTitle2 = itemView.findViewById(R.id.txtTaskTitle2);
             txtDue = itemView.findViewById(R.id.txtDue);
             txtTask2 = itemView.findViewById(R.id.txtTask2);
-            btnEdit = itemView.findViewById(R.id.btnUpdate);
+            btnEdit = itemView.findViewById(R.id.btnEdit);
         }
 
     }
