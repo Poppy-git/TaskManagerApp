@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -59,5 +60,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
             txtDue = itemView.findViewById(R.id.txtDue);
             txtTask2 = itemView.findViewById(R.id.txtTask2);
         }
+
     }
+
+
 }
