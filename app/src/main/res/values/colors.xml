@@ -5,5 +5,6 @@
     <color name="bgColor"> #3B1E54</color>
     <color name="mainColor"> #D4BEE4</color>
     <color name="secondaryColor">#9B7EBD</color>
+    <color name="terColor">#60407B</color>
 
 </resources>

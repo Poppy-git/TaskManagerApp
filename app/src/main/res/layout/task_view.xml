@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/rounded_background"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTaskTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:foregroundGravity="center_vertical"
+                android:hint="Task Title"
+                android:textColor="@color/bgColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtDue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:foregroundGravity="center_vertical"
+                android:hint="Due Date"
+                android:textColor="@color/terColor"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtTask2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center_vertical"
+                android:hint="Task Description"
+                android:textColor="@color/terColor"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:buttonTint="@color/secondaryColor"
+            app:buttonIconTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondaryColor"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Delete Task"
+            android:textColor="@color/bgColor"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/delete"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconSize="14dp"
+            app:iconTint="@color/bgColor" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondaryColor"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Edit Task"
+            android:textColor="@color/bgColor"
+            android:textSize="14sp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/edit"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconSize="14dp"
+            app:iconTint="@color/bgColor" />
+
+    </LinearLayout>
+</LinearLayout>
