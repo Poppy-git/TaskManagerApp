@@ -22,10 +22,10 @@
             android:name=".AddDaily"
             android:exported="false" />
         <activity
-            android:name=".DisplayData"
+            android:name=".AddMonthly"
             android:exported="false" />
         <activity
-            android:name=".AddMonthly"
+            android:name=".DisplayData"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
