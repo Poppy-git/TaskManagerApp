@@ -31,7 +31,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //Creates table with columns in db for tasks
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         String query = "CREATE TABLE " + TABLE_NAME + "(" +
                 COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COL_TASKTITLE + " TEXT, " +
@@ -39,6 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_TIME + " TEXT);";
         db.execSQL(query);
     }
+
     //Updates sqlitedatabase when available
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
