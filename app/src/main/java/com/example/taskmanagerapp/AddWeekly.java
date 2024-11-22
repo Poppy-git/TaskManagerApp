@@ -24,7 +24,7 @@ import com.google.android.material.timepicker.TimeFormat;
 import java.text.MessageFormat;
 import java.util.Locale;
 
-public class AddMonthly extends AppCompatActivity {
+public class AddWeekly extends AppCompatActivity {
 
     EditText txtTitle, txtDescription;
     TextView txtEnterDate;
@@ -35,7 +35,7 @@ public class AddMonthly extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_add_monthly);
+        setContentView(R.layout.activity_add_weekly);
 
         txtTitle = findViewById(R.id.txtTitle);
         txtDescription = findViewById(R.id.txtDescription);
@@ -55,11 +55,11 @@ public class AddMonthly extends AppCompatActivity {
             String taskDescription = txtDescription.getText().toString();
             String taskTime = txtEnterDate.getText().toString();
 
-            DatabaseHelper dh = new DatabaseHelper(AddMonthly.this);
+            DatabaseHelper dh = new DatabaseHelper(AddWeekly.this);
             Task task = new Task(taskTitle, taskDescription, taskTime);
             dh.createTask(task);
 
-            Intent i = new Intent(AddMonthly.this, AddEdit.class);
+            Intent i = new Intent(AddWeekly.this, AddEdit.class);
             startActivity(i);
             finish();
         });
