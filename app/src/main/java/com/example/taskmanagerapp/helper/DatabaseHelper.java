@@ -58,8 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, " Failed to Insert", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(context, task.gettaskTitle() + " saved successfully", Toast.LENGTH_SHORT).show();
-
-
     }
     public Cursor readAllTask(){
         String query = "SELECT * FROM " + TABLE_NAME;
