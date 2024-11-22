@@ -55,9 +55,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Today's Tasks"
+                android:textColor="@color/bgColor"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="74dp"
@@ -69,10 +69,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:text="Organize Notes..."
-            android:textSize="14sp"
-            android:textColor="#E0E0E0"
-            android:layout_marginTop="0dp" />
+            android:textColor="@color/terColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <!-- Button for Weekly Tasks -->
@@ -101,9 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Weekly Tasks"
+                android:textColor="@color/bgColor"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="74dp"
@@ -115,10 +115,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="Organize Notes..."
-            android:textSize="14sp"
-            android:textColor="#E0E0E0"
-            android:layout_marginTop="4dp" />
+            android:textColor="@color/terColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <!-- Button for Monthly Tasks -->
@@ -146,9 +146,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Monthly Tasks"
+                android:textColor="@color/bgColor"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="74dp"
@@ -160,10 +160,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="Organize Notes..."
-            android:textSize="14sp"
-            android:textColor="#E0E0E0"
-            android:layout_marginTop="4dp" />
+            android:textColor="@color/terColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
 </LinearLayout>
