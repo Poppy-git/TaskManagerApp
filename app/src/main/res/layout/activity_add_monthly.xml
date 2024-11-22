@@ -13,9 +13,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="80dp"
-        android:layout_marginRight="10dp"
         android:background="@drawable/rounded_background"
         android:orientation="vertical">
 
@@ -51,9 +50,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="60dp"
-        android:layout_marginRight="10dp"
         android:background="@drawable/rounded_background"
         android:orientation="vertical">
 
@@ -89,9 +88,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginTop="60dp"
-        android:layout_marginRight="10dp"
         android:background="@drawable/rounded_background"
         android:orientation="vertical">
 
@@ -134,8 +132,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00FFFFFF"
-                app:tint="@color/bgColor"
-                app:srcCompat="@drawable/clock" />
+                app:srcCompat="@drawable/clock"
+                app:tint="@color/bgColor" />
         </LinearLayout>
     </LinearLayout>
 
