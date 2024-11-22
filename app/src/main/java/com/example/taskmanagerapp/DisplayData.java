@@ -16,5 +16,7 @@ public class DisplayData extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        //All buttons is papunta sa AddEdit
+        //Depending kung ano pinindot na list, 'yun yung magiging text ng "txtListTitle" sa AddEdit
     }
 }

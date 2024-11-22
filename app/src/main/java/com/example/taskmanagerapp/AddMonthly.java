@@ -49,22 +49,25 @@ public class AddMonthly extends AppCompatActivity {
                 openDialog();
             }
         });
-
+        //Save button to save user inputted data from fields
         btnsave.setOnClickListener(v-> {
             String taskTitle =txtTitle.getText().toString();
             String taskDescription = txtDescription.getText().toString();
             String taskTime = txtEnterDate.getText().toString();
 
+            //Passes data from the fields to the database
             DatabaseHelper dh = new DatabaseHelper(AddMonthly.this);
             Task task = new Task(taskTitle, taskDescription, taskTime);
             dh.createTask(task);
 
+            //Exits current activity (AddMonthly) to previous activity (AddEdit)
             Intent i = new Intent(AddMonthly.this, AddEdit.class);
             startActivity(i);
             finish();
         });
     }
 
+    //Calendar or DatePickerDialog
     private void openDialog() {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override

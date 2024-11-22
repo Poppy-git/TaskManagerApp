@@ -41,47 +41,49 @@ public class AddDaily extends AppCompatActivity {
             return insets;
         });
 
-            txtTitle = findViewById(R.id.txtTitle);
-            txtDescription = findViewById(R.id.txtDescription);
-            txtEnterTime = findViewById(R.id.txtEnterTime);
-            btnclock = findViewById(R.id.btnClock);
-            btnsave = findViewById(R.id.btnUpdate);
+        txtTitle = findViewById(R.id.txtTitle);
+        txtDescription = findViewById(R.id.txtDescription);
+        txtEnterTime = findViewById(R.id.txtEnterTime);
+        btnclock = findViewById(R.id.btnClock);
+        btnsave = findViewById(R.id.btnUpdate);
 
-            btnclock.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
-                            .setTimeFormat(TimeFormat.CLOCK_12H)
-                            .setHour(12)
-                            .setMinute(0)
-                            .setInputMode(MaterialTimePicker.INPUT_MODE_KEYBOARD)
-                            .setTitleText("Pick Time")
-                            .build();
-                    timePicker.addOnPositiveButtonClickListener(new View.OnClickListener(){
+        //Time input
+        btnclock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
+                        .setTimeFormat(TimeFormat.CLOCK_12H)
+                        .setHour(12)
+                        .setMinute(0)
+                        .setInputMode(MaterialTimePicker.INPUT_MODE_KEYBOARD)
+                        .setTitleText("Pick Time")
+                        .build();
+                timePicker.addOnPositiveButtonClickListener(new View.OnClickListener(){
 
-                        @Override
-                        public void onClick(View v) {
-                            txtEnterTime.setText(MessageFormat.format("{0}:{1}", String.format(Locale.getDefault(), "%02d",timePicker.getHour()),String.format(Locale.getDefault(),"%02d",timePicker.getMinute())));
-                        }
-                    });
-                    timePicker.show(getSupportFragmentManager(),"tag");
-                }
-            });
+                    @Override
+                    public void onClick(View v) {
+                        txtEnterTime.setText(MessageFormat.format("{0}:{1}", String.format(Locale.getDefault(), "%02d",timePicker.getHour()),String.format(Locale.getDefault(),"%02d",timePicker.getMinute())));
+                    }
+                });
+                timePicker.show(getSupportFragmentManager(),"tag");
+            }
+        });
 
+        //Save button to save user inputted data from fields
+        btnsave.setOnClickListener(v-> {
+            String taskTitle =txtTitle.getText().toString();
+            String taskDescription = txtDescription.getText().toString();
+            String taskTime = txtEnterTime.getText().toString();
 
-            btnsave.setOnClickListener(v-> {
-                String taskTitle =txtTitle.getText().toString();
-                String taskDescription = txtDescription.getText().toString();
-                String taskTime = txtEnterTime.getText().toString();
+            //Passes data from the fields to the database
+            DatabaseHelper dh = new DatabaseHelper(AddDaily.this);
+            Task task = new Task(taskTitle, taskDescription, taskTime);
+            dh.createTask(task);
 
-
-                DatabaseHelper dh = new DatabaseHelper(AddDaily.this);
-                Task task = new Task(taskTitle, taskDescription, taskTime);
-                dh.createTask(task);
-
-                Intent i = new Intent(AddDaily.this, AddEdit.class);
-                startActivity(i);
-                finish();
-            });
+            //Exits current activity (AddMonthly) to previous activity (AddEdit)
+            Intent i = new Intent(AddDaily.this, AddEdit.class);
+            startActivity(i);
+            finish();
+        });
     }
 }
