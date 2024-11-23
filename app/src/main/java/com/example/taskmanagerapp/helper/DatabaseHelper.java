@@ -22,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_TASKTITLE = "task_title";
     public static final String COL_TASKDESCRIPTION = "task_description";
     public static final String COL_TIME = "time";
+    public static final String COL_TASKPLACEMENT = "task_placement";
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_Version);
@@ -35,7 +36,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COL_TASKTITLE + " TEXT, " +
                 COL_TASKDESCRIPTION + " TEXT, " +
-                COL_TIME + " TEXT);";
+                COL_TIME + " TEXT);" ;
+               //COL_TASKPLACEMENT + " TEXT);";
         db.execSQL(query);
     }
 
@@ -51,6 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COL_TASKTITLE, task.gettaskTitle());
         cv.put(COL_TASKDESCRIPTION, task.gettaskDescription());
         cv.put(COL_TIME, task.gettaskTime());
+        //cv.put(COL_TASKPLACEMENT, task.gettaskPlacement());
 
         long result = db.insert(TABLE_NAME, null, cv);
 

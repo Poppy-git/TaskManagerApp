@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DisplayData extends AppCompatActivity {
 
+    final char[] value = {'D', 'W', 'M'}; //Daily, Weekly, Monthly
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

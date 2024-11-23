@@ -41,6 +41,7 @@ public class AddEdit extends AppCompatActivity {
 
         //Button for new task
         btnNewTask.setOnClickListener( v-> {
+
             Intent i = new Intent(AddEdit.this, AddDaily.class);
             startActivity(i);
             finish();
